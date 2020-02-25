@@ -10,10 +10,20 @@ namespace Muzistream_api.Controllers
         {
         }
 
-        [HttpGet("current")]
-        public void GetCurrentUser()
+        [HttpPost("connect")]
+        public void Connect(string login, string password)
         {
+            if (login == "" || password == "")
+            {
+                return ;
+            }
+            return ;
+        }
 
+        [HttpGet("community-code")]
+        public string GetUserCommnityCode(string userReference) 
+        {
+            return "1901";
         }
     }
 }
